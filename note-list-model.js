@@ -8,10 +8,9 @@
   };
 
   List.prototype.getListNotes = function () {
-    var notes = "";
-    for (var i = 0; i < this.array.length; i++)
+    for (var i = 0; i <= this.array.length; i++)
     {
-      console.log(this.array[i]);
+      return this.array[i];
     }
 
   };
