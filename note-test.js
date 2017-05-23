@@ -1,14 +1,14 @@
 (function(exports) {
-  function returnNoteMessage() {
-    var test_string = "Doctor's apt";
-    var note = new Note(test_string);
+  function returnNoteText() {
+    var test_text = "Doctor's apt";
+    var note = new Note(test_text);
 
-    if (note.getNoteMessage() === test_string) {
-      console.log(note.note_message);
+    if (note.getNoteText() === test_text) {
+      console.log(note.text);
     } else {
       throw new Error("Object does not contain a message");
       }
     }
 
-  returnNoteMessage();
+  returnNoteText();
 })(this);
