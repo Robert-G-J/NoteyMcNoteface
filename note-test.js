@@ -16,14 +16,14 @@
 (function(exports) {
   function testReturnArrayObjects() {
     var test_text = "Doctor's apt";
-    var test_text2 = "Meeting on Wed";
+    //var test_text2 = "Meeting on Wed";
     var list = new List();
     var note = new Note(test_text);
-    var note_2 = new Note(test_text2);
+    //var note_2 = new Note(test_text2);
     list.addToList(note);
-    list.addToList(note_2);
+    //list.addToList(note_2);
 
-    if (list.getListNotes() === list.this_array) {
+    if (list.getListNotes()[0].constructor === note.constructor);  {
       console.log(true);
     } else {
       throw new Error("You have no notes");
