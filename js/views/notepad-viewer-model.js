@@ -1,17 +1,17 @@
 (function(exports) {
-    function Viewer(notepad) {
-      this._notepad = notepad;
-    }
+  function Viewer(notepad) {
+    this._notepad = notepad;
+  }
 
-    Viewer.prototype.wrapText = function(string) {
-      return `<ul><li><div>${string}</div></li></ul>`;
-    };
+  Viewer.prototype.wrapText = function(string) {
+    return `<ul><li><div>${string}</div></li></ul>`;
+  };
 
-    Viewer.prototype.wrapList = function() {
-      this._notepad.getAllNotes().map(function(note) {
-          note.getText();
-        });
-      }
+  Viewer.prototype.wrapList = function() {
+    this._notepad.getAllNotes().map(function(note) {
+      return note.getText();
+    });
+  };
 
-  }; exports.Viewer = Viewer;
+   exports.Viewer = Viewer;
 })(this);
