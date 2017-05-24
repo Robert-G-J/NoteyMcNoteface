@@ -3,13 +3,9 @@
     this._notes = [];
   }
 
-  Notepad.prototype.addNote = function(note) {
-    return this._notes.push(note);
-  };
-
   Notepad.prototype.createNote = function(text) {
     var note = new Note(text);
-    return this._notes.push(note);
+    this._notes.push(note);
   };
 
   Notepad.prototype.getNote = function(notesIndex) {
