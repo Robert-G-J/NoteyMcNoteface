@@ -25,7 +25,7 @@
 
     if (list.getListNotes()[0].constructor === note.constructor);  {
       console.log(true);
-    } else {
+    } else if {
       throw new Error("You have no notes");
     }
   }
