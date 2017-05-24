@@ -2,7 +2,7 @@
   function Viewer() {
   }
 
-  Viewer.prototype.wrapText = function (string) {
+  Viewer.prototype.wrapText = function(string) {
     return `<ul><li><div>${string}</div></li></ul>`;
   };
 
