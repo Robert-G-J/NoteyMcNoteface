@@ -1,17 +1,19 @@
-(function(exports) {
-  function returnNoteText() {
+
+(function() {
+    console.log("Tests that user can view notes");
     var test_text = "Doctor's apt";
     var note = new Note(test_text);
 
-    if (note.getNoteText() === test_text) {
-      console.log(note.text);
-    } else {
-      throw new Error("Object does not contain a message");
-    }
-  }
+    assert.isConstructedFrom(note, Note);
+    assert.isEqual(test_text, note.getNoteText());
+    console.log("Test Passed");
 
-  returnNoteText();
-})(this);
+  //   if (note.getNoteText() === test_text) {
+  //     console.log(note.text);
+  //   } else {
+  //     throw new Error("Object does not contain a message");
+  //   }
+   })();
 
 (function(exports) {
   function testReturnArrayObjects() {
