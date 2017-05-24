@@ -12,12 +12,11 @@
 (function() {
     console.log("Unit test: Store a note");
 
-    var notepad, note, test_text;
+    var notepad, test_text;
 
     test_text = "Doctor's apt";
     notepad = new Notepad();
-    note = new Note(test_text);
-    notepad.addNote(note);
+    notepad.createNote(test_text);
 
     console.log(notepad.getNote(0));
     assert.isEqual(notepad.getNote(0).getText(), test_text);
@@ -27,22 +26,32 @@
 (function() {
     console.log("Unit test: Store several notes");
 
-    var notepad, note, test_text;
+    var notepad, test_text_1, test_text_2;
 
     test_text_1 = "Doctor's apt";
     test_text_2 = "Surgeon's apt";
     notepad = new Notepad();
-    note_1 = new Note(test_text_1);
-    note_2 = new Note(test_text_2);
 
-    notepad.addNote(note_1);
-    notepad.addNote(note_2);
-    notepad.getAllNotes();
+    notepad.createNote(test_text_1);
+    notepad.createNote(test_text_2);
+
     assert.isEqual(notepad.getAllNotes().length, 2);
     console.log("Test Passed");
 })();
 
+(function() {
+  console.log("Unit test: Create a note in the notepad");
 
+  var notepad;
+
+  notepad = new Notepad();
+
+  notepad.createNote("Meet my mistress, Audrey");
+
+  assert.isEqual(notepad.getAllNotes().length, 1);
+  assert.isEqual(notepad.getNote(0).getText(), "Meet my mistress, Audrey")
+  console.log("Test Passed");
+})();
 
 
 
