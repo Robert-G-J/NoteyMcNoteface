@@ -8,13 +8,13 @@
   };
 
   Notepad.prototype.getNote = function(notesIndex) {
-    return this._notes[0];
-  }
+    return this._notes[notesIndex];
+  };
 
-  Notepad.prototype.getListNotes = function () {
-    for (var i = 0; i <= this.array.length; i++)
+  Notepad.prototype.getAllNotes = function () {
+    for (var i = 0; i <= this._notes.length; i++)
     {
-      return this.array[i];
+      return this._notes[i];
     }
 
   };
