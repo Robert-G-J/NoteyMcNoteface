@@ -1,0 +1,23 @@
+{
+  "name": "singlepagenotes",
+  "version": "1.0.0",
+  "description": "notes for all the family",
+  "main": "test-library.js",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robert-G-J/NoteyMcNoteface.git"
+  },
+  "author": "sklm bigmomma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robert-G-J/NoteyMcNoteface/issues"
+  },
+  "homepage": "https://github.com/Robert-G-J/NoteyMcNoteface#readme"
+}
