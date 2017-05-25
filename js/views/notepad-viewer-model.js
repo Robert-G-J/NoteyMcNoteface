@@ -1,16 +1,14 @@
 (function(exports) {
-  function Viewer(notepad) {
+  function Viewer(notepad = new Notepad()) {
     this._notepad = notepad;
   }
 
-  Viewer.prototype.wrapText = function(string) {
-    return `<ul><li><div>${string}</div></li></ul>`;
-  };
-
-  Viewer.prototype.wrapList = function() {
-    this._notepad.getAllNotes().map(function(note) {
-      return note.getText();
-    });
+  Viewer.prototype.getHTML = function() {
+    string = "";
+    for (i=0;i<this._notepad.getAllNotes().length; i++){
+      string += "<li><div>" + this._notepad.getAllNotes()[i].getText() + "</div></li>"
+    };
+      return "<ul>" + string + "</ul>";
   };
 
    exports.Viewer = Viewer;
